@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#10110f">
+		<meta name="description" content="Trova il film giusto per la serata, partendo dal tuo mood.">
+		<title>Cosa guardo stasera?</title>
+		<link rel="preconnect" href="https://image.tmdb.org">
+		<link rel="stylesheet" href="/css/style.css">
+		<script type="module" src="/js/app.js"></script>
+	</head>
+	<body>
+		<div class="site-shell">
+			<header class="site-header">
+				<a class="wordmark" href="index.html" aria-label="Cosa guardo stasera? Home">
+					<span class="wordmark-mark" aria-hidden="true">C</span>
+					<span>FUORICAMPO <span class="wordmark-dot">/</span> FILM CLUB</span>
+				</a>
+				<a class="header-link" href="results.html#watchlist">La mia watchlist <span aria-hidden="true">↗</span></a>
+			</header>
+
+			<main class="home-layout">
+				<section class="intro-copy" aria-labelledby="page-title">
+					<p class="eyebrow"><span class="eyebrow-line"></span> IL TUO PROSSIMO FILM, SENZA SCROLL INFINITO</p>
+					<h1 id="page-title">Cosa guardo<br><em>stasera?</em></h1>
+					<p class="intro-text">Quattro risposte. Tre film. Una serata che comincia bene.</p>
+					<div class="intro-footnote"><span class="status-dot"></span> UN PICCOLO RITUALE PER GRANDI SERATE</div>
+				</section>
+
+				<section class="quiz-panel" aria-labelledby="question-title">
+					<div class="quiz-topline">
+						<span class="eyebrow" id="step-label">IL TUO PERCORSO</span>
+						<span class="step-count" id="step-count">01 <span>/ 04</span></span>
+					</div>
+					<div class="progress-track" role="progressbar" aria-label="Avanzamento del questionario" aria-valuemin="0" aria-valuemax="4" aria-valuenow="1" id="progress-track">
+						<span id="progress-fill"></span>
+					</div>
+					<form id="question-form" novalidate>
+						<div class="question-stage" id="question-stage" aria-live="polite"></div>
+						<div class="quiz-actions">
+							<button class="back-button" id="back-button" type="button" disabled><span aria-hidden="true">←</span> Indietro</button>
+							<p class="selection-hint" id="selection-hint">Scegli una risposta per continuare</p>
+							<button class="button button-primary" id="next-button" type="button" disabled>Continua <span aria-hidden="true">→</span></button>
+						</div>
+					</form>
+					<p class="quiz-note"><span aria-hidden="true">✳</span> Nessuna risposta sbagliata. Solo film da scoprire.</p>
+				</section>
+			</main>
+
+			<footer class="site-footer home-footer">
+				<span>UNA SCELTA ALLA VOLTA</span>
+				<span class="footer-center">FATTO PER LA PROSSIMA SERATA</span>
+				<span>© FUORICAMPO 2026</span>
+			</footer>
+		</div>
+	</body>
+</html>
