@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#ffe600">
+        <title>Conta Caffè — il tuo contatore giornaliero</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="topbar">
+                <a class="brand" href="#" aria-label="Conta Caffè, inizio">Conta Caffè<span>®</span></a>
+                <div class="year-badge" aria-label="Caffè bevuti quest'anno">
+                    <span>Bevuti nel <span id="year-label"></span></span>
+                    <strong id="year-consumed">0</strong>
+                </div>
+            </header>
+
+            <main>
+                <p class="eyebrow">Il tuo rituale quotidiano / <span id="today-label">Oggi</span></p>
+                <h1>Conta. Bevi.<br><span>Ripeti.</span></h1>
+
+                <div class="daily-counters">
+                    <section class="counter consumed-counter" aria-labelledby="consumed-title">
+                        <div class="counter-heading">
+                            <p class="counter-label" id="consumed-title">I miei caffè</p>
+                            <span class="daily-limit">MAX 5 / GIORNO</span>
+                        </div>
+                        <p class="count" aria-live="polite">
+                            <span id="coffee-count">0</span><span class="count-total">/ 5</span>
+                        </p>
+                        <div class="controls">
+                            <button class="step-button minus-button" id="remove-coffee" type="button" aria-label="Rimuovi un caffè bevuto" disabled>−</button>
+                            <button class="step-button plus-button" id="add-coffee" type="button" aria-label="Aggiungi un caffè bevuto">+</button>
+                        </div>
+                        <p id="limit-message" class="limit-message" aria-live="polite"></p>
+                    </section>
+
+                    <section class="counter offered-counter" aria-labelledby="offered-title">
+                        <div class="counter-heading">
+                            <p class="counter-label" id="offered-title">Caffè offerti</p>
+                            <span class="daily-limit">SENZA LIMITE</span>
+                        </div>
+                        <p class="count" aria-live="polite">
+                            <span id="offered-count">0</span>
+                        </p>
+                        <div class="controls">
+                            <button class="step-button minus-button" id="remove-offered" type="button" aria-label="Rimuovi un caffè offerto" disabled>−</button>
+                            <button class="step-button plus-button" id="add-offered" type="button" aria-label="Aggiungi un caffè offerto">+</button>
+                        </div>
+                        <p class="counter-hint">Anche gli offerti contano nella spesa.</p>
+                    </section>
+                </div>
+
+                <section class="spending" aria-label="Spesa per i caffè di oggi">
+                    <span>Spesa di oggi</span>
+                    <strong id="coffee-cost">0,00 €</strong>
+                    <span class="price-note">1,00 € per caffè, offerti inclusi</span>
+                </section>
+
+                <section class="yearly-stats" aria-labelledby="yearly-title">
+                    <div class="stats-heading">
+                        <p class="eyebrow" id="yearly-title">Archivio annuale</p>
+                        <span id="stats-year"></span>
+                    </div>
+                    <div class="stats-grid">
+                        <p><span>Bevuti</span><strong id="yearly-consumed">0</strong></p>
+                        <p><span>Offerti</span><strong id="yearly-offered">0</strong></p>
+                    </div>
+                </section>
+
+                <p id="status-message" class="status-message" role="status"></p>
+            </main>
+
+            <footer class="bottombar">
+                <span>Un caffè alla volta</span>
+                <span>Contatori giornalieri azzerati a mezzanotte</span>
+            </footer>
+        </div>
+    </body>
+</html>
